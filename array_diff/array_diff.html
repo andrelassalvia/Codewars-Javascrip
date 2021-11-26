@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Diff</title>
+  </head>
+  <body>
+    <h1>ARRAY DIFF</h1>
+    <script>
+      // function arrayDiff(a, b) {
+      //   let c;
+      //   let index;
+      //   let zerar;
+      //   for (let i = 0; i < b.length; i++) {
+      //     const element = b[i];
+      //     for (let i = 0; i <= a.length; i++) {
+      //       if (zerar) i = 0;
+      //       const el = a[i];
+      //       if (element === el) {
+      //         c = el;
+      //         zerar = true;
+      //         index = a.indexOf(c);
+      //         a.splice(index, 1); // splice retira do array o elemento na posicao index. O numero depois da virgula e quantas vezes deve ser retirado
+      //       } else {
+      //         zerar = false;
+      //       }
+      //     }
+      //   }
+      //   return a;
+
+      //   // const c = new Set(a.concat(b)); // esta funcao vai retornar valores unicos
+      // }
+
+      // function arrayDiff(a, b) {
+      //   return a.filter((e) => !b.includes(e));
+      // }
+      // console.log(arrayDiff([1, 2, 2], [2]));
+
+      // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+      // const result = words.filter(word => word.length > 6);
+
+      // console.log(result);
+      // expected output: Array ["exuberant", "destruction", "present"]
+
+      const a = [1, 2, 2, 3, 2, 5, 4, 2];
+      const b = [2, 4];
+
+      const result = a.filter((p) => !b.includes(p));
+      console.log(result);
+
+      // (p) sao os elementos de a um a um
+      // includes retorna um valor booleano
+      // o argumento do includes e o elemento p
+      // b.includes significa - b possui o elemento p?
+      // com o ! na frente inverte o resultado do booleno
+      // filter utiliza o True para filtrar
+    </script>
+  </body>
+</html>

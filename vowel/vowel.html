@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vowel</title>
+  </head>
+  <body>
+    <h1>VOWEL</h1>
+
+    <p>
+      Trolls are attacking your comment section! A common way to deal with this
+      situation is to remove all of the vowels from the trolls' comments,
+      neutralizing the threat. Your task is to write a function that takes a
+      string and return a new string with all vowels removed. For example, the
+      string "This website is for losers LOL!" would become "Ths wbst s fr lsrs
+      LL!". Note: for this kata y isn't considered a vowel.
+    </p>
+
+    <script>
+      // RegExp = Regular Expression
+      // Pode ser utilizado para fazer correspondencia entre um texto e um padrao
+      // pode ser construido usando slashes (/) ou new RegExp (objeto)
+      // o valor incluido sera o padrao procurado
+      // valor entre [] sera tratado como lista e cada elemento da lista sera procurado
+      // se quisermos encontrar a RegExp em todo o conteudo podemos utilizar g para ocorrer uma performance global
+
+      // encontrar todas as vogais e substituir por 😁
+      function vowel(str) {
+        let vogals = /[aeiouAEIOU]/g;
+        return str.replace(vogals, "");
+      }
+
+      console.log(vowel("This website is for losers LOL!"));
+
+      // encontrar so a primeira vogal e substituir por 😁 // basta retirar o g
+      function firstVogal(str) {
+        let vogals = /[aeiou]/;
+        return str.replace(vogals, "😁");
+      }
+
+      console.log(firstVogal("Deixe me ir preciso andar"));
+
+      // encontrar a primeira palavra especifica e e substituir por 😁
+      function firstWord(str) {
+        let vogals = /preciso/;
+        return str.replace(vogals, "😁");
+      }
+
+      console.log(
+        firstWord(
+          "Deixe me ir preciso andar, preciso por que preciso andar por ai"
+        )
+      );
+
+      // encontrar todas as palavras especificas e e substituir por 😁
+      function allWords(str) {
+        let vogals = /preciso/g;
+        return str.replace(vogals, "😁");
+      }
+
+      console.log(
+        allWords(
+          "Deixe me ir preciso andar, preciso por que preciso andar por ai"
+        )
+      );
+    </script>
+  </body>
+</html>
